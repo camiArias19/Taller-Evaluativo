@@ -121,3 +121,42 @@ do {
     
     
                 break;
+
+                case 5:
+            function compra() {
+                let valor = parseInt(prompt("Bienvenido!!\nIngrese el valor del producto"))
+                let cantidad = parseInt(prompt("Ingrese la cantidad de productos"));
+                let compra = valor * cantidad;
+                let iva = compra * 0.19
+                let descuento = compra * 0.10
+                let agregado = compra - iva
+                let descuentoIva = descuento + iva
+                let total = compra + iva
+
+                console.log("     EJERCICIO 5")
+                if (compra > 1000000) {
+
+                    console.log("# Por hacer compras mayores  a 1.000.000 le devolvemos el iva y ademas le hacemos un descuento del 10%")
+                    console.log("*Valor a pagar: ---" + descuentoIva)
+                    console.log("* El valor de su compra fue: ---" + compra)
+                    console.log("* Valor del iva: ---" + iva)
+                    console.log("* Su descuento fue de : ---" + descuento)
+                }
+
+                else if (compra > 500000) {
+                    console.log("# Por hacer compras mayores  a 500.000 le devolvemos el iva")  
+                    console.log("*Valor a pagar: ---" + agregado)
+                    console.log("* El valor de su compra fue: ---" + compra)
+                    console.log("* Valor del iva: ---" + iva)
+                }
+
+                else {
+
+                    console.log("* Valor de la compra: ---" + compra);
+                    console.log("* valor del iva: ---" + iva)
+                    console.log("* Valor total a pagar: ---" + total)
+                }
+                ejecuciones.ejercicioCinco++
+            }
+            compra()
+            break;
