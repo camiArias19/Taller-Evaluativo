@@ -73,3 +73,23 @@ do {
 
             calcularArea()
             break;
+            case 3:
+            function tipoTriangulo() {
+                let ladoUno = parseInt(prompt("Ingrese el primer lado del triangulo"))
+                let ladoDos = parseInt(prompt("Ingrese el segundo lado del triangulo"))
+                let ladoTres = parseInt(prompt("Ingrese el tercer lado del triangulo"))
+                console.log("     EJERCICIO 3")
+                if (ladoUno == ladoDos && ladoDos == ladoTres) {
+
+                    console.log("# Triangulo Equilatero")
+                }
+                else if (ladoUno == ladoDos || ladoUno == ladoTres || ladoDos == ladoTres) {
+                    console.log("# Triangulo Isoceles")
+                }
+                else {
+                    console.log("# Triangulo Escaleno")
+                }
+                ejecuciones.ejercicioTres++
+            }
+            tipoTriangulo()
+            break;
