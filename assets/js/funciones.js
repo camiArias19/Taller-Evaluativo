@@ -93,3 +93,31 @@ do {
             }
             tipoTriangulo()
             break;
+            case 4:
+                function sumaDivisores(numero) {
+                    let suma = 0;
+                    for (let i = 1; i <= numero / 2; i++) {
+                        if (numero % i == 0) {
+                            suma += i;
+                        }
+                    }
+                    return suma;
+                }
+                function sonAmigos(numeroUno, numeroDos) {
+                    let sumaUno = sumaDivisores(numeroUno);
+                    let sumaDos = sumaDivisores(numeroDos);
+    
+                    return sumaUno == numeroDos && sumaDos == numeroUno;
+                }
+                let numeroUno = parseInt(prompt("Ingrese el primer número:"));
+                let numeroDos = parseInt(prompt("Ingrese el segundo número:"));
+                console.log("     EJERCICIO 4")
+                if (sonAmigos(numeroUno, numeroDos)) {
+                    console.log(`# Los numeros ${numeroUno} y ${numeroDos}-- son números amigos.`);
+                } else {
+                    console.log(`# Los numeros ${numeroUno} y ${numeroDos}-- no son números amigos.`);
+                    ejecuciones.ejercicioCuatro++;
+                }
+    
+    
+                break;
