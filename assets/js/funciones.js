@@ -160,3 +160,66 @@ do {
             }
             compra()
             break;
+
+            case 6:
+
+
+            function calificaciones() {
+                let notaUno = parseFloat(prompt("Ingrese la primera nota"))
+                let notaDos = parseFloat(prompt("Ingrese la segunda nota"))
+                let notaTres = parseFloat(prompt("Ingrese la tercera nota"))
+                let notaCuatro = parseFloat(prompt("Ingrese la cuarta nota"))
+
+
+                let notaFinal = (notaUno * 0.10 + notaDos * 0.20 + notaTres * 0.30 + notaCuatro * 0.40)
+
+                if (notaCuatro === 5) {
+                    notaUno += 0.1
+                    notaDos += 0.1
+                    notaTres += 0.1
+                }
+                console.log("     EJERCICIO 6")
+                console.log("# La nota final del estudiante es: --- " + notaFinal)
+
+                if (notaFinal > 3.5) {
+                    console.log("* Gano");
+                } else {
+                    console.log("* Perdio");
+                }
+                ejecuciones.ejercicioSeis++
+
+            }
+
+            calificaciones()
+            break;
+    }
+}
+while (menu !== 7) {
+    console.log("-----EJECUCIONES--------------------------------")
+    console.log(" 1.Ordenar numeros:  " + ejecuciones.ejercicioUno)
+    console.log(" 2.Calcular area:  " + ejecuciones.ejercicioDos)
+    console.log(" 3.Tipos de triangulos:  " + ejecuciones.ejercicioTres)
+    console.log(" 4.Numeros amigos:  " + ejecuciones.ejercicioCuatro)
+    console.log(" 5.Valor de la compra:  " + ejecuciones.ejercicioCinco)
+    console.log(" 6.Calificacion: " + ejecuciones.ejercicioSeis)
+
+}
+
+let masEjecutada, menosEjecutada;
+let maxiomoEjecuciones=0;
+let minimoEjecuciones=  Infinity;
+
+for(let menu in ejecuciones ){
+    if(ejecuciones[menu]> maxiomoEjecuciones){
+        maxiomoEjecuciones=ejecuciones[menu]
+        masEjecutada=menu
+    }
+    if(ejecuciones[menu] < minimoEjecuciones){
+        minimoEjecuciones=ejecuciones[menu];
+        menosEjecutada=menu;
+    }
+}
+
+console.log("-----MAS Y MENOS EJECUTADOS-----------------------")
+console.log(`Mas ejecutado: ${masEjecutada}`)
+console.log(`Menos ejecutado: ${menosEjecutada}`)
