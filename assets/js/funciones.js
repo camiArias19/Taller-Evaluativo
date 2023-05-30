@@ -61,3 +61,15 @@ do {
             }
             numerosOrdenados()
             break;
+            case 2:
+            function calcularArea() {
+                let radio = parseInt(prompt("ingrese el radio "))
+                area = 3.14 * Math.pow(radio, 2)
+                console.log("     EJERCICIO 2")
+                console.log("# El area es: ---" + area)
+
+                ejecuciones.ejercicioDos++;
+            }
+
+            calcularArea()
+            break;
